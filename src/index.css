@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+/* فونت Vazirmatn */
+@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
+body {
+  font-family: 'Vazir', sans-serif;
+}
+
+@keyframes moveCoin {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(110vw); /* full screen width */
+  }
+}
+
+.animate-moveCoin {
+  animation: moveCoin 15s linear infinite;
+}
