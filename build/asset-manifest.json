@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.766f875e.css",
+    "main.js": "/static/js/main.4143fbe4.js",
+    "static/js/453.55dec2a9.chunk.js": "/static/js/453.55dec2a9.chunk.js",
+    "static/media/happy.png": "/static/media/happy.ed6ad782e1e5facb9da2.png",
+    "static/media/benefit.svg": "/static/media/benefit.947fce8ecf0211a11424876a5f7bc74d.svg",
+    "static/media/interface.svg": "/static/media/interface.17cd19ce013afcb25107130aa41c2eb8.svg",
+    "static/media/googlePlay.svg": "/static/media/googlePlay.b7ca19ce4cac8c4be55b9314c4865f1a.svg",
+    "static/media/money.svg": "/static/media/money.48bc57a38c980d634d2342f267b5149d.svg",
+    "static/media/headphone.svg": "/static/media/headphone.68e203df17354608ac90d13cb4631e2e.svg",
+    "static/media/apple.svg": "/static/media/apple.3e1fdd411ae8157556d2be818c5cbea8.svg",
+    "static/media/lock.svg": "/static/media/lock.29fa4c3895095749d066c1ab5d82cd04.svg",
+    "index.html": "/index.html",
+    "main.766f875e.css.map": "/static/css/main.766f875e.css.map",
+    "main.4143fbe4.js.map": "/static/js/main.4143fbe4.js.map",
+    "453.55dec2a9.chunk.js.map": "/static/js/453.55dec2a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.766f875e.css",
+    "static/js/main.4143fbe4.js"
+  ]
+}
