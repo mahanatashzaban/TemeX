@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import glob from "../assets/glob.svg";
+<img src="/glob.svg" alt="Glob" />
+
 
 const coinIds = ["bitcoin", "ethereum", "solana", "ripple", "cardano", "litecoin", "dogecoin", "polkadot"];
 
@@ -64,12 +65,13 @@ const WaveBackground = () => {
       style={{ background: "linear-gradient(to bottom, #4F46E5 0%, #F3F4F6 100%)" }}
     >
       {/* Globe image */}
-      <img
-        src={glob}
-        alt="Globe"
-        className="absolute top-10 right-0 md:right-10 w-40 md:w-60 opacity-90 animate-pulse"
-        style={{ maxWidth: "100%", height: "auto" }}
-      />
+<img
+  src="/glob.svg"
+  alt="Globe"
+  className="absolute top-10 right-0 md:right-10 w-40 md:w-60 opacity-90 animate-pulse"
+  style={{ maxWidth: "100%", height: "auto" }}
+/>
+
 
       {/* Coins with prices moving on wave */}
       {coinIds.map((id, i) => (

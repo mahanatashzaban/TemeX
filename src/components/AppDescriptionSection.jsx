@@ -1,7 +1,5 @@
-// components/AppDescriptionSection.jsx
 import React from 'react';
 import appleImg from "../assets/apple.svg";
-import bazarImg from "../assets/bazar.svg";
 import googlePlayImg from "../assets/googlePlay.svg";
 
 const AppDescriptionSection = () => (
@@ -13,7 +11,7 @@ const AppDescriptionSection = () => (
       در عرض کمتر از یک دقیقه در اپلیکیشن ما معامله کنید و از جدیدترین اخبار کریپتو مطلع باشید
     </p>
     <div className="grid grid-cols-3 gap-4">
-      {[appleImg, bazarImg, googlePlayImg].map((img, i) => (
+      {[appleImg, "/bazar.svg", googlePlayImg].map((img, i) => (
         <img key={i} src={img} alt={`store-${i}`} className="w-full h-auto rounded shadow-md object-cover" />
       ))}
     </div>
