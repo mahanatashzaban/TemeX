@@ -1,9 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-<img src="/glob.svg" alt="Glob" />
 
-
-const coinIds = ["bitcoin", "ethereum", "solana", "ripple", "cardano", "litecoin", "dogecoin", "polkadot"];
-
+const coinIds = [
+  "bitcoin",
+  "ethereum",
+  "solana",
+  "ripple",
+  "cardano",
+  "litecoin",
+  "dogecoin",
+  "polkadot"
+];
 
 const WaveBackground = () => {
   const pathRef = useRef(null);
@@ -38,7 +44,7 @@ const WaveBackground = () => {
 
     coins.forEach((coin, i) => {
       let progress = (i * 0.18) % 1; // spread coins out
-      const speed = 0.0003 + i * 0.00005; // slower speeds
+      const speed = 0.0003 + i * 0.00005; // different speeds
 
       const animate = () => {
         progress += speed;
@@ -46,11 +52,10 @@ const WaveBackground = () => {
 
         const point = path.getPointAtLength(progress * pathLength);
 
-        // Position relative to container's top-left corner
-        const rect = container.getBoundingClientRect();
+        // Adjust Y position higher based on screen size
+        const yOffset = window.innerWidth < 768 ? 60 : 30;
 
-        // Set left & top relative to container, offset the coin a bit above path (e.g. 20px)
-        coin.style.transform = `translate(${point.x}px, ${point.y - 20}px)`;
+        coin.style.transform = `translate(${point.x}px, ${point.y - yOffset}px)`;
 
         requestAnimationFrame(animate);
       };
@@ -61,17 +66,18 @@ const WaveBackground = () => {
   return (
     <div
       ref={containerRef}
-      className="relative w-screen h-[50vh] overflow-hidden"
-      style={{ background: "linear-gradient(to bottom, #4F46E5 0%, #F3F4F6 100%)" }}
+      className="relative w-screen h-[60vh] overflow-hidden"
+      style={{
+        background: "linear-gradient(to bottom, #4F46E5 0%, #F3F4F6 100%)"
+      }}
     >
       {/* Globe image */}
-<img
-  src="/glob.svg"
-  alt="Globe"
-  className="absolute top-10 right-0 md:right-10 w-40 md:w-60 opacity-90 animate-pulse"
-  style={{ maxWidth: "100%", height: "auto" }}
-/>
-
+      <img
+        src="/glob.svg"
+        alt="Globe"
+        className="absolute top-10 right-0 md:right-10 w-40 md:w-60 opacity-90 animate-pulse"
+        style={{ maxWidth: "100%", height: "auto" }}
+      />
 
       {/* Coins with prices moving on wave */}
       {coinIds.map((id, i) => (
@@ -82,10 +88,10 @@ const WaveBackground = () => {
             position: "absolute",
             pointerEvents: "none",
             textShadow:
-              "0 0 5px rgba(0,0,0,0.6), 0 0 10px rgba(0,0,0,0.3)", // subtle glow for readability
+              "0 0 5px rgba(0,0,0,0.6), 0 0 10px rgba(0,0,0,0.3)",
             fontSize: "14px",
             userSelect: "none",
-            willChange: "transform",
+            willChange: "transform"
           }}
         >
           {id.charAt(0).toUpperCase() + id.slice(1, 3).toUpperCase()}{" "}
@@ -93,7 +99,7 @@ const WaveBackground = () => {
         </div>
       ))}
 
-      {/* Wave SVG with bottom fill color same as homepage bg */}
+      {/* Wave SVG */}
       <svg
         className="absolute bottom-0 left-0 w-full"
         viewBox="0 0 1440 320"
